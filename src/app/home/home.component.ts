@@ -14,21 +14,12 @@ export class HomeComponent implements OnInit {
   title = 'TCP Diagonsis Platform';
   @Output() logs: Log[] = [];
   @Output() carriers: Carrier[] = [];
-  @Output() online: boolean = true;
   private _connection: ISignalRConnection;
 
   constructor(private route: ActivatedRoute, private onlineService: SignalrService) { }
 
   ngOnInit() {
     this._connection = this.route.snapshot.data['connection'];
-    this._connection.status.subscribe((status: ConnectionStatus) => {
-      this.online = true;
-      this.onlineService.notifyOnlineStateChanged(true);
-    });
-    this._connection.errors.subscribe((error: any) => {
-      this.online = false;
-      this.onlineService.notifyOnlineStateChanged(false);
-    });
     const onLog$ = new BroadcastEventListener<string>('log');
     const onDataUploaded$ = new BroadcastEventListener<any>('dataUploaded');
     onLog$.subscribe((log: string) => {

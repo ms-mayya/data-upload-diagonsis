@@ -65,6 +65,7 @@ import { Base64ToHexPipe } from './base64-to-hex.pipe';
 import { LightCodeDirective } from './light-code.directive';
 import { QuestionDialogComponent } from './question-dialog/question-dialog.component';
 import { FooterComponent } from './footer/footer.component';
+import { ConnectionStatusPipe } from './connection-status.pipe';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { FooterComponent } from './footer/footer.component';
     Base64ToHexPipe,
     LightCodeDirective,
     QuestionDialogComponent,
-    FooterComponent
+    FooterComponent,
+    ConnectionStatusPipe
   ],
   imports: [
     BrowserModule,
