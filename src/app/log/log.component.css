@@ -1,0 +1,6 @@
+mat-toolbar-row{
+    flex-direction: column;
+}
+mat-form-field{
+    width: 50%;
+}

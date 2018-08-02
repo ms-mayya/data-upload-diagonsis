@@ -1,0 +1,16 @@
+.adb-status-online{
+    color: lightgreen;
+}
+.adb-status-offline{
+    color: grey;
+}
+.text-super{
+    vertical-align: super;
+    font-size: 10px;
+}
+.text-super-online{
+    color: #75ab75;
+}
+.text-super-offline{
+    color: grey;
+}

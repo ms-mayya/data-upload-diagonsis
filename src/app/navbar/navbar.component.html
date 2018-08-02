@@ -1,0 +1,8 @@
+<mat-toolbar class="mat-evelation-z2" color="primary">
+  <mat-toolbar-row>
+    <button mat-button class="adb-button" [matTooltip]="online ? 'online' : 'offline'">
+      <i class="material-icons" [ngClass]="{ 'adb-status-online': online, 'adb-status-offline': !online }">adb</i>
+    </button>
+    <a *ngIf="false" mat-button routerLink="/" routerLinkActive="active">Home</a>
+  </mat-toolbar-row>
+</mat-toolbar>
