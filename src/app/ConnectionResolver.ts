@@ -28,7 +28,7 @@ export class ConnectionResolver implements Resolve<ISignalRConnection> {
                 } else {
                     connection.start();
                 }
-            }, 60 * 1000);
+            }, 1000);
         });
         let connectingSnackBarRef: MatSnackBarRef<SimpleSnackBar>;
         connection.status.subscribe((status) => {
