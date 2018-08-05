@@ -7,7 +7,7 @@ import { SignalRModule, SignalRConfiguration } from 'ng2-signalr';
 export function createConfig(): SignalRConfiguration {
   const c = new SignalRConfiguration();
   c.hubName = 'getwayData';
-  c.url = 'http://221.226.80.114:23333/signalr/hubs';
+  c.url = 'https://ms-mayya.com/signalr/hubs';
   c.logging = false;
   return c;
 }
