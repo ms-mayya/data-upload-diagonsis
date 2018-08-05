@@ -1,9 +1,8 @@
 import { Carrier } from './../models/carrier';
 import { ActivatedRoute } from '@angular/router';
-import { ISignalRConnection, BroadcastEventListener, ConnectionStatus } from 'ng2-signalr';
+import { ISignalRConnection, BroadcastEventListener } from 'ng2-signalr';
 import { Component, OnInit, Output } from '@angular/core';
 import { Log } from '../models/log';
-import { SignalrService } from '../signalr.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +15,7 @@ export class HomeComponent implements OnInit {
   @Output() carriers: Carrier[] = [];
   private _connection: ISignalRConnection;
 
-  constructor(private route: ActivatedRoute, private onlineService: SignalrService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this._connection = this.route.snapshot.data['connection'];

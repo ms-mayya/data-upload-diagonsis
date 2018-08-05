@@ -20,15 +20,6 @@ export class ConnectionResolver implements Resolve<ISignalRConnection> {
             this._snackBar.open('Error', null, {
                 duration: 2000
             });
-            let retriveRef = this._snackBar.open('正在重试建立连接...', null, { duration: 0 });
-            let timer = setInterval(() => {
-                if (this._online) {
-                    clearInterval(timer);
-                    retriveRef.dismissWithAction();
-                } else {
-                    connection.start();
-                }
-            }, 1000);
         });
         let connectingSnackBarRef: MatSnackBarRef<SimpleSnackBar>;
         connection.status.subscribe((status) => {
