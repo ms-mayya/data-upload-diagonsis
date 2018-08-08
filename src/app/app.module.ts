@@ -22,7 +22,8 @@ import {
   MatTableModule,
   MatTabsModule,
   MatToolbarModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatBadgeModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -62,6 +63,7 @@ import { ConnectionStatusPipe } from './connection-status.pipe';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatBadgeModule,
     AppRoutingModule,
     SignalRModule.forRoot(createConfig)
   ],
