@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
       const getwayId = (/\[\d+\]/g.exec(log) || [''])[0];
       log = log.replace(getwayId, '');
       const code = (/\[.+\]/g.exec(log) || [''])[0];
+      log = log.replace(code, '');
       this.logs.splice(0, 0, new Log(log, code, getwayId));
       this.logs = ([]).concat(this.logs);
     });
