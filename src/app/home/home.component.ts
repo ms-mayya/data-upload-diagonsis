@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     const onLog$ = new BroadcastEventListener<string>('log');
     const onDataUploaded$ = new BroadcastEventListener<any>('dataUploaded');
     onLog$.subscribe((log: string) => {
-      const getwayId = (/\[\d+\]/g.exec(log) || ['     '])[0];
+      const getwayId = (/\[\d+\]/g.exec(log) || [''])[0];
       log = log.replace(getwayId, '');
       const code = (/\[.+\]/g.exec(log) || [''])[0];
       this.logs.splice(0, 0, new Log(log, code, getwayId));

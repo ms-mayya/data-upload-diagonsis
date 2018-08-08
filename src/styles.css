@@ -1,81 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-body{
-    margin: 0;
-    padding: 0;
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+body {
+  margin: 0;
+  padding: 0;
 }
-app-navbar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
+
+app-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 }
-.layout-content{
-    padding-top: 56px;
+
+.layout-content {
+  padding-top: 56px;
 }
-@media (min-width: 599px){
-    .layout-content{
-        padding-top: 64px;
-    }
+
+@media (min-width: 599px) {
+  .layout-content {
+    padding-top: 64px;
+  }
 }
-.mat-button.adb-button{
-    height: 100%;
+
+.mat-button.adb-button {
+  height: 100%;
 }
-.mat-cell{
-    font-size: 13px;
+
+.mat-cell {
+  font-size: 13px;
 }
-table{
-    width: 100%;
+
+table {
+  width: 100%;
 }
-.mat-column-city{
-    text-align: right !important;
+
+.mat-column-city {
+  text-align: right !important;
 }
-.mat-column-data, .mat-column-log{
-    word-wrap: break-word;
-    word-break: break-word;
+
+.mat-column-data,
+.mat-column-log {
+  word-wrap: break-word;
+  word-break: break-word;
 }
+
 .mat-header-cell,
-.mat-cell{
-    padding: 8px !important;
+.mat-cell {
+  padding: 0 8px !important;
 }
-.mat-column--{
-    padding-left: 24px !important;
+
+.mat-column-- {
+  padding-left: 24px !important;
 }
-code{
-    font-family: 'Consolas';
-    font-size: 12px;
-    margin: 0 4px;
-    opacity: 0;
-    color: #0000ff;
+
+.getwayId {
+  color: #008000;
+  padding-right: 8px;
 }
-mat-dialog-container{
-    background: #000 !important;
-    color: #fff !important;
+
+code {
+  font-family: 'Consolas';
+  font-size: 12px;
+  margin: 0 4px;
+  opacity: 0;
+  color: #0000ff;
 }
-.mat-dialog-content{
-    overflow: hidden !important;
+
+mat-dialog-container {
+  background: #000 !important;
+  color: #fff !important;
 }
-.fbi-warning{
-    padding: 20px 30px;
-    overflow: hidden !important;
+
+.mat-dialog-content {
+  overflow: hidden !important;
 }
-.fbi-warning-title{
-    background: #c20230;
-    color: #fff;
-    width: 160px;
-    text-align: center;
-    margin: 0 auto !important;
-    user-select: none;
+
+.fbi-warning {
+  padding: 20px 30px;
+  overflow: hidden !important;
 }
-.fbi-warning-content{
-    padding-top: 20px;
-    font: 500 16px/21px Roboto,"Helvetica Neue",sans-serif;
-    margin: 0 auto !important;
+
+.fbi-warning-title {
+  background: #c20230;
+  color: #fff;
+  width: 160px;
+  text-align: center;
+  margin: 0 auto !important;
+  user-select: none;
 }
-.fbi-warning-footer{
-    font: 500 16px/21px Roboto,"Helvetica Neue",sans-serif;
-    text-align: center;
-    margin: 0;
+
+.fbi-warning-content {
+  padding-top: 20px;
+  font: 500 16px/21px Roboto, "Helvetica Neue", sans-serif;
+  margin: 0 auto !important;
+}
+
+.fbi-warning-footer {
+  font: 500 16px/21px Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  margin: 0;
 }

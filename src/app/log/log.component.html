@@ -10,7 +10,7 @@
   <ng-container matColumnDef="log">
     <th mat-header-cell *matHeaderCellDef>Log</th>
     <td mat-cell *matCellDef="let element">
-      <button mat-button color="primary">{{element.getwayId}}</button>
+      <span *ngIf="element.getwayId" class="getwayId">{{element.getwayId}}</span>
       <span>{{element.log}}</span>
       <code>{{element.code}}</code>
     </td>
