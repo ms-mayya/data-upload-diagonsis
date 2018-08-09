@@ -36,6 +36,7 @@ import { Base64ToHexPipe } from './base64-to-hex.pipe';
 import { LightCodeDirective } from './light-code.directive';
 import { FooterComponent } from './footer/footer.component';
 import { ConnectionStatusPipe } from './connection-status.pipe';
+import { NivoSliderComponent } from './nivo-slider/nivo-slider.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ConnectionStatusPipe } from './connection-status.pipe';
     Base64ToHexPipe,
     LightCodeDirective,
     FooterComponent,
-    ConnectionStatusPipe
+    ConnectionStatusPipe,
+    NivoSliderComponent
   ],
   imports: [
     BrowserModule,

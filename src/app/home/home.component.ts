@@ -4,11 +4,14 @@ import { ISignalRConnection, BroadcastEventListener } from 'ng2-signalr';
 import { Component, OnInit, Output } from '@angular/core';
 import { Log } from '../models/log';
 
+declare var $: any;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   title = 'TCP Diagonsis Platform';
   @Output() logs: Log[] = [];
@@ -35,5 +38,25 @@ export class HomeComponent implements OnInit {
     });
     this._connection.listen(onLog$);
     this._connection.listen(onDataUploaded$);
+
+    this.createNivoSliderScript();
   }
+
+  createNivoSliderScript() {
+    if ($) {
+      if (!document.getElementById('nivo-slider')) {
+        const nivoSliderScript = document.createElement('script');
+        nivoSliderScript.id = 'nivo-slider';
+        nivoSliderScript.src = 'https://cdn.bootcss.com/jquery-nivoslider/3.2/jquery.nivo.slider.min.js';
+        document.body.appendChild(nivoSliderScript);
+      }
+      if (!document.getElementById('nivo-slider-pack')) {
+        const nivoSliderPackScript = document.createElement('script');
+        nivoSliderPackScript.id = 'nivo-slider-pack';
+        nivoSliderPackScript.src = 'https://cdn.bootcss.com/jquery-nivoslider/3.2/jquery.nivo.slider.pack.min.js';
+        document.body.appendChild(nivoSliderPackScript);
+      }
+    }
+  }
+
 }

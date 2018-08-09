@@ -1,8 +1,11 @@
 <mat-toolbar class="mat-evelation-z2" color="primary">
   <mat-toolbar-row>
-    <button mat-button class="adb-button" [matTooltip]="online ? 'online' : 'offline'">
+    <button mat-button class="adb-button" [matTooltip]="online ? 'online' : 'offline'" routerLink="/" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact:
+true}">
       <i class="material-icons" [ngClass]="{ 'adb-status-online': online, 'adb-status-offline': !online }">adb</i>
     </button>
-    <a *ngIf="false" mat-button routerLink="/" routerLinkActive="active">Home</a>
+    <a mat-button routerLink="/nivo-slider" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+true}">Nivo Slider</a>
   </mat-toolbar-row>
 </mat-toolbar>
